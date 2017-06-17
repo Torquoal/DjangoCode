@@ -1,7 +1,8 @@
-from django.conf.urls import url
+from django.conf.urls import patterns, url
 from rango import views
 
-urlpatterns = [ 
-				url(r'^$', views.index, name='index'), # ^$ - Empty String - Homepage
-				url(r'^about/', views.about, name='about'),
-			  ]
+urlpatterns = patterns('',
+        url(r'^$', views.index, name='index'),
+        url(r'^about/', views.about, name='about'),
+        
+        )
